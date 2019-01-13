@@ -4,12 +4,7 @@ import productsData from './components/Product/api/productsData';
 
 let ProdArr = productsData.map(
   apiResponse => 
-  <Prod 
-    key={apiResponse.id}
-    name={apiResponse.name}
-    price={apiResponse.price}
-    desc={apiResponse.description}
-  />
+  <Prod key={apiResponse.id} product={apiResponse}/>
 );
 
 const App = () => {
