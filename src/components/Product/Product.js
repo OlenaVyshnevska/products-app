@@ -25,7 +25,7 @@ class Prod extends Component {
                 <br />
                 Price: {this.props.product.price.toLocaleString("en-US", {style: "currency", currency: "USD"})}
                 <br />
-                <Button intent="success" onClick={this.handleClick} icon="key">
+                <Button intent="success" onClick={this.handleClick} icon="download">
                     {this.state.isOpen ? "Hide" : "Show"} Description
                 </Button>
                 <Collapse isOpen={this.state.isOpen}> 

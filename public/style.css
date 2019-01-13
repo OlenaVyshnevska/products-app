@@ -1,12 +1,12 @@
 #root {
-    background: whitesmoke;
+    background: white;
     width: 900px;
 }
 
-.prod {
+.prodBox {
     margin: 5px 5px 5px 5px;
     padding: 5px 5px 5px 5px;
-    border: 1px solid red;
+    border: 1px solid purple;
 }
 
 .item {

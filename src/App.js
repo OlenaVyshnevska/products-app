@@ -9,7 +9,7 @@ let ProdArr = productsData.map(
 
 const App = () => {
   return(
-    <div className="prod">
+    <div className="prodBox">
       {ProdArr}
     </div>
   );
