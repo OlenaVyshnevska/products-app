@@ -1,3 +1,16 @@
 #root {
-    background: yellow;
+    background: whitesmoke;
+    width: 700px;
+}
+
+.prod {
+    margin: 5px 5px 5px 5px;
+    padding: 5px 5px 5px 5px;
+    border: 1px solid red;
+}
+
+.item {
+    border: 1px solid blue;
+    margin: 5px 5px 5px 5px;
+    padding: 5px 5px 5px 5px;
 }
