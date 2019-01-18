@@ -1,19 +1,23 @@
 import React, { Component } from 'react';
-import {Collapse} from '@blueprintjs/core';
+import { Button, Collapse } from '@blueprintjs/core';
 
 class Prod extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            isOpen: false
+            isOpen: false,
+            buttonStyle: "download"
         };
         this.handleClick = this.handleClick.bind(this);
     }
 
     handleClick() {
-        this.setState(
-            {
-                isOpen: !this.state.isOpen
+        this.setState(prevState =>
+            { 
+                return {
+                    isOpen: !this.state.isOpen,
+                    buttonStyle: prevState.buttonStyle === "download" ? "upload" : "download"
+                };
             }
         );
     }
@@ -23,9 +27,9 @@ class Prod extends Component {
             <div className="item">
                 <h2>{this.props.product.name}</h2>
                 <h4>{this.props.product.price.toLocaleString("en-US", {style: "currency", currency: "USD"})}</h4>
-                <button className="btn-desc" intent="success" onClick={this.handleClick} icon="download">
+                <Button className="btn-desc" intent="success" onClick={this.handleClick} icon={this.state.buttonStyle}>
                     {this.state.isOpen ? "Hide" : "Show"} Description
-                </button>
+                </Button>
                 <Collapse isOpen={this.state.isOpen}>
                     <p>
                         {this.props.product.description}

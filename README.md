@@ -15,4 +15,4 @@ This is another react app that I built to test and practice mapping components i
 
 * `npm start`
 
-* Go to `localhost:3000` in your web browser
+* Go to `http://localhost:3000` in your web browser
